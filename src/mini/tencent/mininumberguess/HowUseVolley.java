@@ -19,12 +19,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 
 /**
- * 测试页，使用volley发起请求网络
+ * 娴嬭瘯椤碉紝浣跨敤volley鍙戣捣璇锋眰缃戠粶
  * 
  * @author felix
  *
@@ -41,26 +42,30 @@ public class HowUseVolley extends Activity
 
         setContentView(R.layout.activity_main);
         String url = "http://test.tv.video.qq.com/i-tvbin/open/get_sesskey?version=1&format=json";
-        // 发起请求
-        CommJsonRequest jsonRequest = new CommJsonRequest(url, new Response.Listener<JSONObject>()
-        {
-            @Override
-            public void onResponse(JSONObject response)
-            {
-                Log.d(TAG, "response -> " + response.toString());
-            }
-        }, new ErrorListener()
-        {
-            @Override
-            public void onErrorResponse(VolleyError arg0)
-            {
-                Log.d(TAG, "volley error");
-            }
-        }, null);
-
-        // 请求加上Tag,用于取消请求
-        jsonRequest.setTag(this);
-
-        VolleyUtil.getQueue(this).add(jsonRequest);
+        // 鍙戣捣璇锋眰
+        Intent intent = new Intent();
+        intent.setClass(this, WaitingActivity.class);
+        startActivity(intent);
+//        CommJsonRequest jsonRequest = new CommJsonRequest(url, new Response.Listener<JSONObject>()
+//        {
+//            @Override
+//            public void onResponse(JSONObject response)
+//            {
+//                Log.d(TAG, "response -> " + response.toString());
+//            }
+//        }, new ErrorListener()
+//        {
+//            @Override
+//            public void onErrorResponse(VolleyError arg0)
+//            {
+//            	
+//                Log.d(TAG, "volley error: " + arg0.toString());
+//            }
+//        }, null);
+//
+//        // 璇锋眰鍔犱笂Tag,鐢ㄤ簬鍙栨秷璇锋眰
+//        jsonRequest.setTag(this);
+//
+//        VolleyUtil.getQueue(this).add(jsonRequest);
     }
 }
