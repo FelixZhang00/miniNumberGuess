@@ -54,7 +54,7 @@ public class HowUseVolley extends Activity
             @Override
             public void onErrorResponse(VolleyError arg0)
             {
-                Log.d(TAG, "volley error");
+                Log.d(TAG, "volley error:"+arg0.toString());
             }
         }, null);
 

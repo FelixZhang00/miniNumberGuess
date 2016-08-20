@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="username0">#e21400</color>
+    <color name="primary">#9B26AF</color>
+    <color name="primary_dark">#691A99</color>
+    <color name="accent">#68EFAD</color>
+    <color name="white">#fff</color>
+    <color name="cod_gray">#303030</color>
+
+</resources>

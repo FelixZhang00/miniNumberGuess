@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    >
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/bar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏中..." />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/room_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1000" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Felix"
+        android:gravity="right"
+        android:paddingRight="10dp"
+         />
+
+</LinearLayout>
